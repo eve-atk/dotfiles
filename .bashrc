@@ -1,5 +1,6 @@
 # alias系
-alias ll='ls -al --color'
+alias ll="ls -al --color"
+alias vless="/usr/share/vim/vim[0-9][0-9]/macros/less.sh"
 
 # PATH系
 export PATH=$PATH:/home/developer/.pyenv/shims/python
