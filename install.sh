@@ -49,17 +49,6 @@ else
   cmd="ln -s $HOME/.vim/pack/dist/colors/iceberg.vim/colors/iceberg.vim $HOME/.vim/colors/iceberg.vim"
   eval $cmd
   
-  # Clone package
-  echo "\nClone: lightline"
-  cmd="git clone https://github.com/itchyny/lightline.vim.git $HOME/.vim/pack/dist/start/lightline.vim"
-  eval $cmd
-  echo "\nClone: NerdTree"
-  cmd="git clone https://github.com/scrooloose/nerdtree.git $HOME/.vim/pack/dist/start/nerdtree.vim"
-  eval $cmd
-  echo "\nClone: previm"
-  cmd="git clone https://github.com/previm/previm.git $HOME/.vim/pack/dist/start/previm.vim"
-  eval $cmd
-  
   echo "done.\n"
   
   # End Msg.
@@ -73,3 +62,4 @@ END
 
 fi
 
+source ~/.bashrc
