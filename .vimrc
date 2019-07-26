@@ -1,7 +1,7 @@
 " 色設定
 syntax on
-colorscheme iceberg
 set t_Co=256
+colorscheme iceberg
 
 " setting
 "文字コードをUFT-8に設定
