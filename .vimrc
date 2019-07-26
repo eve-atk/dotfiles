@@ -1,6 +1,6 @@
 " 色設定
-colorscheme elflord
-syntax enable
+syntax on
+colorscheme iceberg
 
 " setting
 "文字コードをUFT-8に設定
@@ -26,8 +26,6 @@ set cursorline
 set virtualedit=onemore
 " インデントはスマートインデント
 set smartindent
-" ビープ音を可視化
-set visualbell
 " 括弧入力時の対応する括弧を表示
 set showmatch
 " ステータスラインを常に表示

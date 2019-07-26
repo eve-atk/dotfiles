@@ -1,3 +1,5 @@
+ADD Pipfile 1
+RUN pip install pipenv && pipenv install
 #!/bin/zsh
 
 set -u
