@@ -1,5 +1,3 @@
-ADD Pipfile 1
-RUN pip install pipenv && pipenv install
 #!/bin/zsh
 
 set -u
@@ -45,6 +43,7 @@ else
   eval $cmd
   
   # Clone Color Scheme
+  ## iceberg
   echo "\nClone: Iceberg"
   cmd="git clone https://github.com/cocopon/iceberg.vim.git $HOME/.vim/pack/dist/colors/iceberg.vim"
   eval $cmd
@@ -53,6 +52,15 @@ else
   
   echo "done.\n"
   
+  ## molokai
+  echo "\nClone: Molokai"
+  cmd="git clone https://github.com/tomasr/molokai $HOME/.vim/pack/dist/colors/molokai.vim"
+  eval $cmd
+  cmd="ln -s $HOME/.vim/pack/dist/colors/molokai.vim/colors/molokai.vim $HOME/.vim/colors/molokai.vim"
+  eval $cmd
+
+  echo "done.\n"
+
   # End Msg.
   cat << END
   
