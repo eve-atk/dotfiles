@@ -37,19 +37,14 @@ set wildmode=list:longest
 nnoremap j gj
 nnoremap k gk
 
-" python
-
 
 " Tab系
-" 不可視文字を可視化(タブが「▸-」と表示される)
 set list listchars=tab:\▸\-
-" Tab文字を半角スペースにする
 set expandtab
-" 行頭以外のTab文字の表示幅（スペースいくつ分）
 set tabstop=4
-" 行頭でのTab文字の表示幅
 set shiftwidth=4
-
+set autoindent
+set smartindent
 
 " 検索系
 " 検索文字列が小文字の場合は大文字小文字を区別なく検索する
@@ -64,3 +59,10 @@ set wrapscan
 set hlsearch
 " ESC連打でハイライト解除
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
+
+
+" yml
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile, BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup END
