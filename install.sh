@@ -10,7 +10,7 @@ if [[ -n "${opts[(i)--help]}" ]]; then
 else
   if [[ -n "${opts[(i)--reset]}" ]]; then
     echo "=== Remove dotfiles ==="
-    cmd="rm -fv $HOME/.vimrc ; rm -rfv $HOME/.vim ; rm -fv $HOME/.bashrc"
+    cmd="rm -fv $HOME/.vimrc ; rm -rfv $HOME/.vim ; rm -fv $HOME/.bashrc; rm -fv $HOME/.screenrc"
     eval $cmd
   
     echo "\n**************************************************\n"
@@ -18,7 +18,7 @@ else
   #=== Symbolic Link ===#
   echo "=== Symbolic Link ==="
   
-  DOT_FILES=(.vimrc .bashrc)
+  DOT_FILES=(.vimrc .bashrc .screenrc)
   
   for file in ${DOT_FILES[@]}
   do

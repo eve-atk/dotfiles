@@ -1,0 +1,24 @@
+# shell
+shell $SHELL
+
+# escape
+escape ^Qq
+
+# screen code
+defutf8 on
+defencoding utf8
+encoding utf8 utf8
+
+# 邪魔なやつ
+startup_message off
+vbell off
+
+# buffer消す
+altscreen on
+
+# color
+defbce on
+term xterm-256color
+
+# status line
+hardstatus alwayslastline "%{= cd} %-w%{= dd} %n %t* %{-}%+w %= LoadAVG [%l] "
