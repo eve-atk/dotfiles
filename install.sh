@@ -91,8 +91,8 @@ else
 
   ## ghq
   echo "\nClone: ghq"
-  git clone https://github.com/motemen/ghq $HOME
-  (cd $HOME; make install)
+  git clone https://github.com/motemen/ghq $HOME/ghq
+  (cd $HOME/ghq; make install)
 
   ## update zshrc, zpreztorc
   echo "\nUpdate: zshrc, zpreztorc"
@@ -121,5 +121,3 @@ else
 END
 
 fi
-
-source ~/.bashrc
