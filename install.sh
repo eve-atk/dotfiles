@@ -10,7 +10,7 @@ if [[ -n "${opts[(i)--help]}" ]]; then
 else
   if [[ -n "${opts[(i)--reset]}" ]]; then
     echo "=== Remove dotfiles ==="
-    cmd="rm -fv $HOME/.vimrc ; rm -rfv $HOME/.vim ; rm -fv $HOME/.bashrc; rm -fv $HOME/.screenrc"
+    cmd="rm -fv $HOME/.vimrc ; rm -rfv $HOME/.vim ; rm -fv $HOME/.bashrc; rm -fv $HOME/.screenrc; rm -fv$HOME/.vim/osc52.vim"
     eval $cmd
   
     echo "\n**************************************************\n"
@@ -61,6 +61,14 @@ else
 
   echo "done.\n"
 
+  # ssh越しにコピペするやつ
+  echo "\nLink osc52.vim"
+  
+  cmd="ln -s $HOME/dotfiles/osc52.vim $HOME/.vim/osc52.vim"
+  eval $cmd
+
+  echo "done.\n"
+  
   # End Msg.
   cat << END
   
