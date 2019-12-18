@@ -66,3 +66,8 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
+
+
+" ssh越しコピペ
+source ~/.vim/osc52.vim
+vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
