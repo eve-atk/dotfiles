@@ -6,3 +6,6 @@ git clone https://github.com/eve-atk/dotfiles.git
 chmod +x dotfiles/install.sh
 dotfiles/install.sh
 ```
+
+## Fonts
+See [here](https://github.com/powerline/fonts)
