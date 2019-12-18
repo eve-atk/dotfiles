@@ -69,6 +69,48 @@ else
 
   echo "done.\n"
   
+  # zsh関連
+  echo "\nStart: zsh related"
+  ## prezto
+  echo "\nClone: prezto"
+  cmd='git clone --recursive https://github.com/sorin-ionescu/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"'
+  eval $cmd
+
+  echo "\nSetup: prezto"
+  setopt EXTENDED_GLOB
+  for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
+    ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
+  done
+
+  # Clone Theme
+  echo "\nClone POWERLEVEL9K"
+  cmd="git clone https://github.com/bhilburn/powerlevel9k.git  ~/.zprezto/modules/prompt/external/powerlevel9k"
+  eval $cmd
+  cmd="ln -s ~/.zprezto/modules/prompt/external/powerlevel9k/powerlevel9k.zsh-theme ~/.zprezto/modules/prompt/functions/prompt_powerlevel9k_setup"
+  eval $cmd
+
+  ## ghq
+  echo "\nClone: ghq"
+  git clone https://github.com/motemen/ghq $HOME
+  (cd $HOME; make install)
+
+  ## update zshrc, zpreztorc
+  echo "\nUpdate: zshrc, zpreztorc"
+  cmd="rm -fv $HOME/.zpreztorc; rm -fv $HOME/.zshrc"
+  eval $cmd
+
+  DOT_FILES=(.zshrc .zpreztorc)
+  
+  for file in ${DOT_FILES[@]}
+  do
+    ln -s $HOME/dotfiles/$file $HOME/$file
+  done
+
+  ## chsh
+  echo "\nchsh: $SHELL -> /bin/zsh"
+  cmd="chsh -s /bin/zsh"
+  eval $cmd
+  
   # End Msg.
   cat << END
   
