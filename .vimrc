@@ -67,6 +67,11 @@ augroup fileTypeIndent
     autocmd BufNewFile,BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup END
 
+" go
+augroup fileTypeIndent
+    autocmd!
+    autocmd BufNewFile,BufRead *.go setlocal noexpandtab
+augroup END
 
 " ssh越しコピペ
 source ~/.vim/osc52.vim
