@@ -1,6 +1,6 @@
 ## Installation
 ```
-sudo apt install git zsh peco
+sudo apt install git zsh peco mercurial
 
 ## go環境作成
 cd $HOME

@@ -15,8 +15,8 @@ fi
 POWERLEVEL9K_CONTEXT_TEMPLATE="%n[`hostname -f`]"
 
 # PATH
-export PATH=$PATH:/usr/local/go/bin:$HOME/bin
-export GOPATH=$HOME
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$HOME/bin:$HOME/.local/bin:$GOPATH/bin
 
 # history
 HISTFILE=$HOME/.zsh-history

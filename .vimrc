@@ -72,6 +72,10 @@ augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab
 augroup END
+" vim-go
+let g:go_bin_path = $GOPATH.'/bin'
+let g:go_fmt_command = "goimports"
+filetype plugin indent on
 
 " ssh越しコピペ
 source ~/.vim/osc52.vim

@@ -2,7 +2,7 @@
 shell $SHELL
 
 # escape
-escape ^Qq
+escape ^Aa
 
 # screen code
 defutf8 on

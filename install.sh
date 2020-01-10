@@ -106,6 +106,10 @@ else
     ln -s $HOME/dotfiles/$file $HOME/$file
   done
 
+  ## go?
+  cmd="mkdir $HOME/go"
+  eval $cmd
+
   ## chsh
   echo "\nchsh: $SHELL -> /bin/zsh"
   cmd="chsh -s /bin/zsh"
