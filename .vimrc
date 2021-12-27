@@ -6,10 +6,6 @@ colorscheme iceberg
 " setting
 "文字コードをUFT-8に設定
 set fenc=utf-8
-" バックアップファイルを作らない
-set nobackup
-" スワップファイルを作らない
-set noswapfile
 " 編集中のファイルが変更されたら自動で読み直す
 set autoread
 " バッファが編集中でもその他のファイルを開けるように
@@ -61,22 +57,19 @@ set hlsearch
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
 
 
-" yml
+" indent
 augroup fileTypeIndent
     autocmd!
     autocmd BufNewFile,BufRead *.yml setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup END
-
-" go
-augroup fileTypeIndent
-    autocmd!
     autocmd BufNewFile,BufRead *.go setlocal noexpandtab
 augroup END
+
+
 " vim-go
 let g:go_bin_path = $GOPATH.'/bin'
 let g:go_fmt_command = "goimports"
 filetype plugin indent on
 
 " ssh越しコピペ
-source ~/.vim/osc52.vim
-vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>
+" source ~/.vim/osc52.vim
+" vmap <C-c> y:call SendViaOSC52(getreg('"'))<cr>

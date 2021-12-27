@@ -12,11 +12,17 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-POWERLEVEL9K_CONTEXT_TEMPLATE="%n[`hostname -f`]"
+POWERLEVEL9K_CONTEXT_TEMPLATE="%n[`hostname`]"
 
 # PATH
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$HOME/bin:$HOME/.local/bin:$GOPATH/bin
+export EDITOR=vim
+
+# Alias
+if [[ -s $HOME/.zsh_alias  ]]; then
+    source $HOME/.zsh_alias
+fi
 
 # history
 HISTFILE=$HOME/.zsh-history
@@ -53,3 +59,5 @@ function peco-ghq-look () {
 
 zle -N peco-ghq-look
 bindkey '^G' peco-ghq-look
+
+export PATH="$HOME/.poetry/bin:$PATH"
