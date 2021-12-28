@@ -12,7 +12,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Customize to your needs...
-POWERLEVEL9K_CONTEXT_TEMPLATE="%n[`hostname`]"
+POWERLEVEL10K_CONTEXT_TEMPLATE="%n[`hostname`]"
 
 # PATH
 export GOPATH=$HOME/go
