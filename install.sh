@@ -99,7 +99,7 @@ else
   cmd="rm -fv $HOME/.zpreztorc; rm -fv $HOME/.zshrc"
   eval $cmd
 
-  DOT_FILES=(.zshrc .zpreztorc)
+  DOT_FILES=(.zshrc .zpreztorc .zsh_alias)
   
   for file in ${DOT_FILES[@]}
   do

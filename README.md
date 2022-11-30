@@ -4,8 +4,8 @@ sudo apt install git zsh peco mercurial
 
 ## go環境作成
 cd $HOME
-wget https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go1.13.5.linux-amd64.tar.gz
+wget https://dl.google.com/go/go1.19.3.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 
 ## 実行
