@@ -1,0 +1,2 @@
+alias ll="ls -al --color"
+alias diff="delta --diff-so-fancy"
