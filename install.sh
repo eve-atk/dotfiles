@@ -84,9 +84,9 @@ else
 
   # Clone Theme
   echo "\nClone POWERLEVEL10K"
-  cmd="git clone https://github.com/bhilburn/powerlevel9k.git  ~/.zprezto/modules/prompt/external/powerlevel10k"
+  cmd="git clone https://github.com/bhilburn/powerlevel10k.git  ~/.zprezto/modules/prompt/external/powerlevel10k"
   eval $cmd
-  cmd="ln -s ~/.zprezto/modules/prompt/external/powerlevel9k/powerlevel9k.zsh-theme ~/.zprezto/modules/prompt/functions/prompt_powerlevel9k_setup"
+  cmd="ln -s ~/.zprezto/modules/prompt/external/powerlevel10k/powerlevel10k.zsh-theme ~/.zprezto/modules/prompt/functions/prompt_powerlevel10k_setup"
   eval $cmd
 
   ## ghq
